@@ -19,6 +19,8 @@
 		36A99127BDE24423D2886A1C /* libPods-poc-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B850509D60E319D741BA0402 /* libPods-poc-tvOSTests.a */; };
 		5852F77ACF7C03370460BB7F /* libPods-poc-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B70F634D135F7FE92938109 /* libPods-poc-tvOS.a */; };
 		7D2F952AAD8B6AC27095FC4A /* libPods-poc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C75068D22C67C5931F61E4 /* libPods-poc.a */; };
+		D4A4CEFE231E4C7C0067257C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4CEFD231E4C7C0067257C /* DataProvider.swift */; };
+		D4A4CF00231E4D170067257C /* DataProviderBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A4CEFF231E4D170067257C /* DataProviderBridge.m */; };
 		E272666510575BF7F35FBBAD /* libPods-pocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9898C871177B07C4C9968B87 /* libPods-pocTests.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,9 @@
 		BE8E6741CBCC61E2DE3F966E /* Pods-poc-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poc-tvOS.release.xcconfig"; path = "Target Support Files/Pods-poc-tvOS/Pods-poc-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		C2D77E4DDDC906A44894594C /* Pods-poc-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poc-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-poc-tvOSTests/Pods-poc-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7EB3AA69D0CF9CEE665CAB2 /* Pods-poc-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poc-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-poc-tvOSTests/Pods-poc-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4A4CEFC231E4C7C0067257C /* poc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poc-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4A4CEFD231E4C7C0067257C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D4A4CEFF231E4D170067257C /* DataProviderBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataProviderBridge.m; sourceTree = "<group>"; };
 		E4C1D3BDBFA52FF8D517845F /* Pods-pocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocTests.release.xcconfig"; path = "Target Support Files/Pods-pocTests/Pods-pocTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				D4A4CEFD231E4C7C0067257C /* DataProvider.swift */,
+				D4A4CEFF231E4D170067257C /* DataProviderBridge.m */,
+				D4A4CEFC231E4C7C0067257C /* poc-Bridging-Header.h */,
 			);
 			name = poc;
 			sourceTree = "<group>";
@@ -194,7 +202,6 @@
 				9CA4C50BB2C2A84C641E37FD /* Pods-pocTests.debug.xcconfig */,
 				E4C1D3BDBFA52FF8D517845F /* Pods-pocTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +299,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1030;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +318,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +539,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A4CEFE231E4C7C0067257C /* DataProvider.swift in Sources */,
+				D4A4CF00231E4D170067257C /* DataProviderBridge.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -582,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CA4C50BB2C2A84C641E37FD /* Pods-pocTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4C1D3BDBFA52FF8D517845F /* Pods-pocTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = pocTests/Info.plist;
@@ -626,6 +641,7 @@
 			baseConfigurationReference = 67EE55C7998D87E084B39206 /* Pods-poc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = poc/Info.plist;
@@ -637,6 +653,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = poc;
+				SWIFT_OBJC_BRIDGING_HEADER = "poc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +665,7 @@
 			baseConfigurationReference = AB77AB52BEFC2A6FD019387F /* Pods-poc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = poc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +676,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = poc;
+				SWIFT_OBJC_BRIDGING_HEADER = "poc-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

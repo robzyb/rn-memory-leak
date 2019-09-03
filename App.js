@@ -8,6 +8,8 @@
 
 import React, {Fragment} from 'react';
 import {
+  NativeEventEmitter,
+  NativeModules,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -23,8 +25,17 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+// import console = require('console');
 
 const App = () => {
+  var DataProvider = NativeModules.DataProvider;
+  const dataProviderEmitter = new NativeEventEmitter(DataProvider);
+  const subscription = dataProviderEmitter.addListener(
+    'NewData',
+    (body) => {}
+  );
+  DataProvider.start();
+  console.log("Started App");
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
